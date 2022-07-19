@@ -9,7 +9,7 @@ import java.time.Month;
 import java.util.List;
 
 //To define that this piece is a bean use: @Component or for this case as its more precise: @Service
-//consequence: In the controller the created userService gets recognized
+//consequence: In the controller the created userService gets recognized.
 @Service
 public class UserService {
     @GetMapping
