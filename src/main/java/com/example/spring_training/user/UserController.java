@@ -15,15 +15,15 @@ public class UserController {
     private final UserService userService;
 
     //add constructor parameter
-    //@Autowired der userService der hier initiiert/instantiated wird, soll um Controller
-    //instantiated in the following constructor:
+    //@Autowired der "userService" der hier initiiert/instantiated wird, soll im Controller
+    //instantiated werden, mit dem folgenden constructor:
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
     @GetMapping
-    public List<User> getUser(){
+    public List<User> getUser() {
         return userService.getUser();
     }
 }
