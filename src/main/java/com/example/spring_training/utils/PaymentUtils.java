@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class PaymentUtils {
     private static Map <String, Double> paymentMap= new HashMap<>();
 
-    {
+    static {
         //there are four customers, with those account values
         paymentMap.put("acc1", 12000.0);
         paymentMap.put("acc2", 1000.0);

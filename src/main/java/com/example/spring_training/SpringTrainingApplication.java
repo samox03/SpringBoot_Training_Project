@@ -1,5 +1,8 @@
 package com.example.spring_training;
 
+import com.example.spring_training.dto.ItemOrderAcknowledgment;
+import com.example.spring_training.dto.ItemOrderRequest;
+import com.example.spring_training.service.ItemOrderService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,12 +10,28 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @SpringBootApplication
 public class SpringTrainingApplication {
+
+	//added API here....
+
+	@Autowired
+	private ItemOrderService service;
+
+
+	@RestController
+	public class buyItemApi {
+		@PostMapping("/getItem")
+		public ItemOrderAcknowledgment orderItem(@RequestBody ItemOrderRequest request){
+			return service.orderItem(request);
+		}
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringTrainingApplication.class, args);
 	}
+
 
 /*	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
@@ -27,6 +46,4 @@ public class SpringTrainingApplication {
 			}
 		};
 	}*/
-
-
 }

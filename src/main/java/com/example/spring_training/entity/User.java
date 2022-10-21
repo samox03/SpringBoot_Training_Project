@@ -1,10 +1,16 @@
 package com.example.spring_training.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.LocalDate;
 
 //what happens here: created different constructors, getters/setters, toString()
-
+@Entity
 public class User {
+
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
     private String email;
@@ -27,6 +33,7 @@ public class User {
         this.date = date;
     }
 
+    //why this 2x?
     public User(String name,
                 String email,
                 Integer age,
