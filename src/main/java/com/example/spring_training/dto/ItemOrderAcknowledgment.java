@@ -15,4 +15,5 @@ public class ItemOrderAcknowledgment {
     private double totalAmount;
     private String invoiceNo;
     private CustomerInfo customerInfo; //=response
+
 }
