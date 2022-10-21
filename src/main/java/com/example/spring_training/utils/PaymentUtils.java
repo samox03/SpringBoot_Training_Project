@@ -19,8 +19,8 @@ public class PaymentUtils {
     public static boolean validateCreditLimit(String accNo,double paidAmount){
         //checking if the account has enough money to pay the order
         if(paidAmount>paymentMap.get(accNo)){
-            //if paied amount is higher than account amount:
-            throw new InsufficientAmountException("insufficient fund");
+            //if paid amount is higher than account amount:
+            throw new InsufficientAmountException("insufficient fund..!");
         }else{
             return true;
         }
