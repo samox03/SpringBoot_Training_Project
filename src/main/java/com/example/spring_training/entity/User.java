@@ -1,4 +1,4 @@
-package com.example.spring_training.user;
+package com.example.spring_training.entity;
 
 import java.time.LocalDate;
 

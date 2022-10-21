@@ -1,5 +1,7 @@
-package com.example.spring_training.user;
+package com.example.spring_training.controller;
 
+import com.example.spring_training.entity.User;
+import com.example.spring_training.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

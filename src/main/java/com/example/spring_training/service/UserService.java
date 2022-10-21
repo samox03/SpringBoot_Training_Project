@@ -1,5 +1,6 @@
-package com.example.spring_training.user;
+package com.example.spring_training.service;
 
+import com.example.spring_training.entity.User;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
